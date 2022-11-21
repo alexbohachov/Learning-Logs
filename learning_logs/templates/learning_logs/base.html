@@ -1,10 +1,23 @@
+{% load bootstrap4 %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Learning Log</title>
-</head>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+
+  </head>
 <body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light md-4 border">
+    <a class="navbar-brand" href="{% url 'learning_logs:index' %}">Learning Logs</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollaps"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggle-icon"></span></button>
+
 <p>
     <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
     <a href="{% url 'learning_logs:topics' %}">Topics</a> -
